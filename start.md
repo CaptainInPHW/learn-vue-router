@@ -14,5 +14,43 @@ description: vue-router 的基本概念
 
 ## How to use route?
 
-Vue Router 是 [Vue.js](https://vuejs.org) 的官方路由管理器，与 Vue.js 的核心深度集成，使构建单页面应用变得简单。使用 Vue.js ，我们已经可以通过组合组件来组成应用程序，当我们引入 Vue Router 后，我们需要做的是，将组件 \(components\) 映射到路由 \(routes\)，然后告诉 Vue Router 在哪里渲染它们。
+Vue Router 是 [Vue.js](https://vuejs.org) 的官方路由管理器，与 Vue.js 的核心深度集成，使构建单页面应用变得简单。使用 Vue.js ，我们已经可以通过组合组件来组成应用程序，当我们引入 Vue Router 后，我们需要做的是，将组件 \(components\) 映射到路由 \(routes\)，然后告诉 Vue Router 在哪里渲染它们（&lt;router-link&gt; & &lt;router-view&gt;）。
+
+```markup
+<!-- 相当于 <a></a> 链接，点击切换路由（routes），从而切换视图（views）-->
+<router-link to="/foo">go to foo component</router-link>
+<router-link to="/bar">go to bar component</router-link>
+<!-- 视图（views）容器 -->
+<router-view></router-view>
+```
+
+```javascript
+import Vue form 'vue';
+import VueRouter form 'vue-router';
+
+// inject Vue Router to Vue
+Vue.use(VueRouter);
+
+// components
+const Foo = { template: '<div>foo</div>' };
+const Bar = { template: '<div>bar</div>' };
+
+// router configuration
+const routes = [
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar }
+];
+
+// Vue Router instance
+const router = new VueRouter({
+  routes
+});
+
+// Vue instance
+const app = new Vue({
+  router
+}).$mount('#app');
+```
+
+可以参照官方的在线例子：[https://jsfiddle.net/yyx990803/xgrjzsup](https://jsfiddle.net/yyx990803/xgrjzsup/)
 
