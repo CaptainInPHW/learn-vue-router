@@ -1,5 +1,5 @@
 ---
-description: vue-router 的基本概念
+description: route 的基本概念以及 vue-router 的基本使用
 ---
 
 # 起步
@@ -10,7 +10,7 @@ description: vue-router 的基本概念
 
 ## Why we use route?
 
-我们想在不同的条件下在页面中显示不同的内容。这个条件显示在当前页面的 URL 中，而切换不同的视图（view）就由路由器（router）负责。当 router 匹配到了正确的路由时，就会将该路由下的视图（view）显示出来。
+我们想在不同的条件下在页面中显示不同的内容。这个条件显示在当前页面的 URL 中，而切换不同的视图（views）就由路由器（router）负责。当 router 匹配到了正确的路由时，就会将该路由下的视图（views）显示出来。
 
 ## How to use route?
 
@@ -52,5 +52,5 @@ const app = new Vue({
 }).$mount('#app');
 ```
 
-可以参照官方的在线例子：[https://jsfiddle.net/yyx990803/xgrjzsup](https://jsfiddle.net/yyx990803/xgrjzsup/)
+将 Vue Router 注入 Vue 的好处是我们可以在任意的地方使用 `this.$router` 访问到页面的路由器，以及使用 `this.$route` 访问到当前页面的路由，而不用在每个页面都引入一次 router。可以参照官方的在线例子：[https://jsfiddle.net/yyx990803/xgrjzsup](https://jsfiddle.net/yyx990803/xgrjzsup/)。
 
