@@ -7,4 +7,5 @@
 * [命名路由](named-routes.md)
 * [声明式与编程式](declarative-and-programmatic.md)
 * [命名视图](named-views.md)
+* [重定向和别名](redirect-and-alias.md)
 
