@@ -87,3 +87,7 @@ router.push({ path: '/user', params: { id } }); // -> /user
 不能和 `path` 共存的只有 `params`，其他的 `this.$route` 属性不存在这种情况。
 {% endhint %}
 
+{% hint style="info" %}
+若有错误，欢迎指正！Base64 Email：Y2FwdGFpbmlucGh3QGdtYWlsLmNvbQ==
+{% endhint %}
+
