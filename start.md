@@ -14,7 +14,7 @@ description: route 的基本概念以及 vue-router 的基本使用
 
 ## How to use route?
 
-Vue Router 是 [Vue.js](https://vuejs.org) 的官方路由管理器，与 Vue.js 的核心深度集成，使构建单页面应用变得简单。使用 Vue.js ，我们已经可以通过组合组件来组成应用程序，当我们引入 Vue Router 后，我们需要做的是，将组件 \(components\) 映射到路由 \(routes\)，然后告诉 Vue Router 在哪里渲染它们（&lt;router-link&gt; & &lt;router-view&gt;）。
+Vue Router 是 [Vue.js](https://vuejs.org) 的官方路由管理器，与 Vue.js 的核心深度集成，使构建单页面应用变得简单。使用 Vue.js ，我们已经可以通过组合组件来组成应用程序，当我们引入 Vue Router 后，我们需要做的是，将组件 \(components\) 映射到路由 \(routes\)，然后告诉 Vue Router 在哪里渲染它们\(`<router-link>` & `<router-view>`\)。
 
 ```markup
 <!-- 相当于 <a></a> 链接，点击切换路由（routes），从而切换视图（views）-->
