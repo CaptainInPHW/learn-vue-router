@@ -67,7 +67,7 @@ router.replace(location, onComplete?, onAbort?)// onComplete 与 onAbort 可选
 {% endhint %}
 
 {% hint style="info" %}
-如果目的地和当前路由相同，只有参数发生了改变 \(比如从一个用户资料到另一个 `/users/1`-&gt; `/users/2`\)，你需要使用 `beforeRouteUpdate` 守卫来监听/捕获/响应这个变化（例如获取用户信息），这一点在[动态路由匹配](https://learn-vue.gitbook.io/vue-router/~/edit/drafts/-LFQpvCHFzjdt-mVUoNc/declarative-and-programmatic)一节有所提及。
+如果**目的路由和当前路由相同**，**只有参数发生了改变** \(比如从一个用户资料到另一个 `/users/1`-&gt; `/users/2`\)，你需要使用 **`beforeRouteUpdate`** 守卫来监听/捕获/响应这个变化（例如获取用户信息），这一点在[动态路由匹配](https://learn-vue.gitbook.io/vue-router/~/edit/drafts/-LFQpvCHFzjdt-mVUoNc/declarative-and-programmatic)一节有所提及。
 {% endhint %}
 
 ### replace.go\(\)

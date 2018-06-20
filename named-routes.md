@@ -71,7 +71,7 @@ const app = new Vue({
 上述的例子中 Vue 配置的 `template` 为什么不写为 `<router-link :to="{ path: '/user', params: { id: 123 } }"></router-link>` ，而是将 `id` 拼接到路由后面呢？因为根据文档的描述，**`path` 和 `params` 一同出现的时候，`params` 会被忽略掉，**你需要**提供路由的 `name`** 或者**提供完整的带有参数的 `path`，**此处需要注意。
 
 {% hint style="info" %}
-在使用**编程式导航**时，使用 `this.$router.push()` 改变当前路由也需要注意，`path` 和 `params` 是不能共存的：
+在使用[**编程式导航**](https://learn-vue.gitbook.io/vue-router/~/edit/drafts/-LFR6aCzSRIyrqMItu1c/ming-ming-lu-you)时，使用 `this.$router.push()` 改变当前路由也需要注意，`path` 和 `params` 是不能共存的：
 
 ```javascript
 const id = 123;
