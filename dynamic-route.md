@@ -22,7 +22,7 @@ const router = new VueRouter({
 
 | 路由模式 | 匹配到的路径 | this.$route.params |
 | --- | --- |
-| /user:user\_name/post:post\_id | /user/daijt/post/123 | `{ user_name: 'daijt', post_id: 123 }` |
+| /user/:user\_name/post/:post\_id | /user/daijt/post/123 | `{user_name: 'daijt', post_id: 123}` |
 
 ## 如何监听/响应动态参数的变化？
 

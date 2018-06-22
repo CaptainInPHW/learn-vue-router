@@ -88,6 +88,91 @@ router.push({ path: '/user', params: { id } }); // -> /user
 {% endhint %}
 
 {% hint style="info" %}
+在使用命名路由进行导航时，如果想要导航至某个嵌套路由下的子路由时，可能会产生警告：
+
+```javascript
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+  },
+  {
+    name: 'user',
+    path: '/user/:id',
+    component: User,
+    children: [
+      // 空路由，即默认子路由，当以 '/user/123' 访问时，显示 Profile 视图
+      {
+        path: '',
+        component: Profile,
+      },
+      {
+        name: 'profile',
+        path: 'profile',
+        component: Profile,
+      },
+      {
+        name: 'emails',
+        path: 'emails',
+        component: Emails,
+      },
+    ],
+];
+```
+
+假设当前路由为 `/`，当想要跳转至 `/user/123/emails` 时，我们使用编程式导航进行操作：
+
+```javascript
+this.$router.push({ name: 'emails', params: { id: 123 } });
+```
+
+路由跳转正常，但是在控制台上显示了一条警告：
+
+> **\[vue-router\] Named Route 'user' has a default child route. When navigating to this named route \(:to="{name: 'user'"\), the default child route will not be rendered. Remove the name from this route and use the name of the default child route for named links instead.**
+>
+> 命名路由 'user' 包含一个默认的子路由，当导航至该命名路由 'user' 时，其下的默认子路由将不会被渲染。移除掉 'user' 路由的名字，使用其下子路由的名字进行跳转/导航。
+
+意思就是**既然你要做成默认子路由的形式，那不如直接去掉根路由的名字，给你的默认子路由一个名字就行了**。将路由配置改为如下：
+
+```javascript
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+  },
+  {
+    // 将嵌套路由的根路由 name 移除
+    path: '/user/:id',
+    component: User,
+    children: [
+      {
+        // 将 name: 'user' 放置于默认的子路由（空路由）上
+        // 当访问 '/user/:123' 时，将直接跳转至该路由
+        // 或者以 $router.push({ name: 'user', params: { id: 123 } }) 形式访问也是没有问题的
+        // 这样改动之后，和前面的配置效果一样，但是意义更加明显
+        // 以 '/user/123' 访问的时候，我就是在访问这个子命名路由，而不是上级的命名根路由了
+        name: 'user',
+        path: '',
+        component: Profile,
+      },
+      {
+        name: 'profile',
+        path: 'profile',
+        component: Profile,
+      },
+      {
+        name: 'emails',
+        path: 'emails',
+        component: Emails,
+      },
+    ],
+];
+```
+{% endhint %}
+
+{% hint style="info" %}
 若有错误，欢迎指正！Base64 Email：Y2FwdGFpbmlucGh3QGdtYWlsLmNvbQ==
 {% endhint %}
 

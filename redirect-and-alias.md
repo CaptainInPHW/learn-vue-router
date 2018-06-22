@@ -75,6 +75,46 @@ const router = new VueRouter({
 值得注意的是路由导航守卫 **`beforeEach`**、**`beforeLeave`** 不会应用在跳转路由上，而会**应用到目标路由**上。上述第一个例子中，为 `/a` 路由设置导航守卫将会失效（因为 `/a` 是跳转路由），正确的做法是为 `/b` 路由设置导航守卫。
 {% endhint %}
 
+{% hint style="info" %}
+当我们使用动态路由时，若想要在路由匹配成功时，显示其下的某个子路由视图，可以使用**重定向**或**空路由**，代码如下：
+
+```javascript
+const routes = [
+  {
+    name: 'user',
+    path: '/user:/id',
+    component: User,
+    redirect: {
+      name: 'profile', // 当访问 '/user/123' 时，将会重定向至 '/user/123/profile'，显示 Profile 视图
+    },
+    children: [
+      {
+        // 空路由，当以 '/user/123' 访问时，默认显示 Profile 视图
+        // 当前路由显示
+        path: '',
+        component: Profile,
+      },
+      {
+        name: 'profile',
+        path: 'profile',
+        component: Profile,
+      },
+      {
+        name: 'emails',
+        path: 'emails',
+        component: Emails,
+    ],
+  },
+];
+```
+
+**重定向**和**空路由**两者择一即可。推荐重定向，因为根据当前浏览器地址栏能更清晰的表现出当前的路由。**使用重定向或空路由时，当前路由的 params 不会丢失**。
+{% endhint %}
+
+{% hint style="info" %}
+
+{% endhint %}
+
 ## 什么是路由别名？
 
 顾名思义，尤雨溪大家也称作尤小右、尤大等，这三个名称都指代的是 Vue.js 的作者。路由别名同样也是，路由别名的配置也是在 routes 中：
