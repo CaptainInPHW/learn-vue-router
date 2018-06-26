@@ -9,4 +9,5 @@
 * [命名视图](named-views.md)
 * [重定向和别名](redirect-and-alias.md)
 * [路由组件传参](route-props.md)
+* [路由模式](route-mode.md)
 
