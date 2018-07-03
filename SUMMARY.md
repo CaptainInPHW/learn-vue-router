@@ -11,6 +11,7 @@
 * [路由组件传参](route-props.md)
 * [路由模式](route-mode.md)
 * [路由元信息](route-mate.md)
-* [过渡动效](guo-du-dong-xiao.md)
-* [数据获取](shu-ju-huo-qu.md)
+* [过渡动效](route-transition.md)
+* [数据获取](fetch-data.md)
+* [滚动行为](scroll-behavior.md)
 
