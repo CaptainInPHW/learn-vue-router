@@ -112,7 +112,3 @@ this.$router.push({ path: `user/${userId}/profile` });
 **如果不给嵌套路由前面添加 `/` 以表示哪个是根路由的话，从嵌套路由外的路由跳转至嵌套路由下的某个子路由时，页面会发生错误，试图容器将一片空白**。
 {% endhint %}
 
-{% hint style="info" %}
-若有错误，欢迎指正！Base64 Email：Y2FwdGFpbmlucGh3QGdtYWlsLmNvbQ==
-{% endhint %}
-

@@ -148,9 +148,5 @@ router.beforeEach((to, from, next) => {
 ```
 {% endhint %}
 
-{% hint style="info" %}
-若有错误，欢迎指正！Base64 Email：Y2FwdGFpbmlucGh3QGdtYWlsLmNvbQ==
-{% endhint %}
-
 
 

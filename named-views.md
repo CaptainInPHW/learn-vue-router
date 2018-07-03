@@ -146,7 +146,3 @@ const app = new Vue({
 
 当路由切换至 `/settings/profile` 时，`profile` 路由配置中命名为 `default` 的组件默认显示在 `UserSettings` 组件下的第一个 `<router-view>` 中（没有 `name` 属性的显示命名为 `default` 的组件），命名为 `helper` 的组件显示在第二个 `<router-view name="helper">`  中。
 
-{% hint style="info" %}
-若有错误，欢迎指正！Base64 Email：Y2FwdGFpbmlucGh3QGdtYWlsLmNvbQ==
-{% endhint %}
-

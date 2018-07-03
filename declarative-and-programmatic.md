@@ -86,7 +86,3 @@ router.go(-1)
 `router.push`、 `router.replace` 和 `router.go` 跟 `window.history.pushState`、 `window.history.replaceState` 和 `window.history.go`好像， 实际上它们确实是效仿了`window.history` 的 API，这使得在 Vue Router 中操作 history 变得简单。 此外，Vue Router 的导航方法 \(`push`、`replace`、`go`\) 在各类路由模式 \(`history`、 `hash` 和 `abstract`\) 下表现一致。
 {% endhint %}
 
-{% hint style="info" %}
-若有错误，欢迎指正！Base64 Email：Y2FwdGFpbmlucGh3QGdtYWlsLmNvbQ==
-{% endhint %}
-

@@ -53,7 +53,3 @@ const routes = [
 
 或者进一步的，还可以参考 [Vue SSR 服务端渲染方案](https://ssr.vuejs.org/zh/)。
 
-{% hint style="info" %}
-若有错误，欢迎指正！Base64 Email：Y2FwdGFpbmlucGh3QGdtYWlsLmNvbQ==
-{% endhint %}
-

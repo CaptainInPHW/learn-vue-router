@@ -10,4 +10,6 @@
 * [重定向和别名](redirect-and-alias.md)
 * [路由组件传参](route-props.md)
 * [路由模式](route-mode.md)
+* [路由元信息](route-mate.md)
+* [过渡动效](guo-du-dong-xiao.md)
 
