@@ -14,4 +14,6 @@
 * [过渡动效](route-transition.md)
 * [数据获取](fetch-data.md)
 * [滚动行为](scroll-behavior.md)
+* [路由懒加载](route-lazy-load.md)
+* [路由守卫](lu-you-shou-wei.md)
 
