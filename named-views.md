@@ -38,7 +38,7 @@ const router = new VueRouter({
 });
 
 // Vue instance
-const app = new Vuw({
+const app = new Vue({
   router,
   template: `
     <div>
